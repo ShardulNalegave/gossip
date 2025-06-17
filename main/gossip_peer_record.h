@@ -14,9 +14,9 @@ typedef enum {
 
 typedef struct gossip_peer_record_t {
     uint8_t status; // gossip_peer_status_t value
-    struct sockaddr_in sockaddr;
     int64_t last_communicated;
     int64_t last_updated;
+    struct sockaddr_in sockaddr;
 
     UT_hash_handle hh;
 } gossip_peer_record_t;

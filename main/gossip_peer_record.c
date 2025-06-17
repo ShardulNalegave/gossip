@@ -23,7 +23,7 @@ gossip_peer_record_t *gossip_add_peer(const struct sockaddr_in *addr) {
 }
 
 int gossip_delete_peer(const struct sockaddr_in *addr) {
-    gossip_peer_record_t *rec = find_peer(addr);
+    gossip_peer_record_t *rec = gossip_find_peer(addr);
     if (!rec) return -1;
 
     HASH_DEL(peer_table, rec);
